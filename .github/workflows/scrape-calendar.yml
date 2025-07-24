@@ -21,16 +21,16 @@ jobs:
           # Nécessaire pour pouvoir commit les changements
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 📦 Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          cache: 'npm'
-
       - name: 📥 Setup pnpm
         uses: pnpm/action-setup@v4
         with:
           version: latest
+
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'pnpm'
 
       - name: 📚 Install dependencies
         run: pnpm install
