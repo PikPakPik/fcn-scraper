@@ -1,277 +1,420 @@
 # FC Nantes Calendar - Généré automatiquement
-# Dernière mise à jour: 2025-07-24 19:26:23 UTC
+# Dernière mise à jour: 2025-07-24 19:29:27 UTC
 # Source: https://billetterie.fcnantes.com/fr/prochains-matchs/calendrier
 # Repository: PikPakPik/fcn-scraper
 
 BEGIN:VCALENDAR
 VERSION:2.0
+PRODID:-//FC Nantes Scraper//FC Nantes Calendar//FR
 CALSCALE:GREGORIAN
-PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-WR-CALNAME:FC Nantes - Calendrier des matchs
+X-WR-CALDESC:Calendrier automatique des matchs du FC Nantes
+X-WR-TIMEZONE:Europe/Paris
+X-PUBLISHED-TTL:PT1H
+NAME:FC Nantes - Calendrier des matchs
+DESCRIPTION:Calendrier automatique des matchs du FC Nantes
+COLOR:#FFE000
+X-APPLE-CALENDAR-COLOR:#FFE000
+X-OUTLOOK-COLOR:#FFE000
+REFRESH-INTERVAL:PT1H
+X-WR-RELCALID:fcnantes-calendar
+SOURCE;VALUE=URI:https://raw.githubusercontent.com/[USERNAME]/[REPOSITORY]/main/calendrier-fcnantes.ics
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:fcnantes-scraper//FC Nantes Calendar//FR
 METHOD:PUBLISH
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:XaF96f8uQ-wCDRCyd1x7i
+UID:fcn-nantes-vs-parisfc-1754758800000@fcnantes.com
 SUMMARY:NANTES vs PARIS FC
-DTSTAMP:20250724T192623Z
+DTSTAMP:20250724T192927Z
 DTSTART:20250809T170000Z
 DTEND:20250809T190000Z
-DESCRIPTION:Compétition: Match Amical
+SEQUENCE:0
+DESCRIPTION:🏈 NANTES vs PARIS FC\\n🏆 Match Amical\\n🏠 Domicile\\n📍 Stade de
+	 la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\, France\\n\\n⚽ A
+	llez les Canaris ! 💛💚
+URL:https://www.fcnantes.com/
 LOCATION:Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\,
 	 France
 STATUS:CONFIRMED
-CATEGORIES:Match Amical
+CATEGORIES:Match Amical,Sport,Football
+TRANSP:OPAQUE
+CLASS:PUBLIC
 END:VEVENT
 BEGIN:VEVENT
-UID:dM2-SXqwxX2rYUSwHexrq
+UID:fcn-nantes-vs-parissg-1755456300000@fcnantes.com
 SUMMARY:NANTES vs PARIS SG
-DTSTAMP:20250724T192623Z
+DTSTAMP:20250724T192927Z
 DTSTART:20250817T184500Z
 DTEND:20250817T204500Z
-DESCRIPTION:Compétition: Ligue 1 McDonald's • Journée 1
+SEQUENCE:0
+DESCRIPTION:🏈 NANTES vs PARIS SG\\n🏆 Ligue 1 McDonald's • Journée 1\\n🏠 Dom
+	icile\\n📍 Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes
+	\, France\\n\\n⚽ Allez les Canaris ! 💛💚
+URL:https://www.fcnantes.com/
 LOCATION:Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\,
 	 France
 STATUS:CONFIRMED
-CATEGORIES:Ligue 1 McDonald's • Journée 1
+CATEGORIES:Ligue 1 McDonald's • Journée 1,Sport,Football
+TRANSP:OPAQUE
+CLASS:PUBLIC
 END:VEVENT
 BEGIN:VEVENT
-UID:ix3wVSs_nvgXwDkDN004N
+UID:fcn-nantes-vs-strasbourg-1756048500000@fcnantes.com
 SUMMARY:NANTES vs STRASBOURG
-DTSTAMP:20250724T192623Z
+DTSTAMP:20250724T192927Z
 DTSTART:20250824T151500Z
 DTEND:20250824T171500Z
-DESCRIPTION:Compétition: Ligue 1 McDonald's • Journée 2
+SEQUENCE:0
+DESCRIPTION:🏈 NANTES vs STRASBOURG\\n🏆 Ligue 1 McDonald's • Journée 2\\n✈️ D
+	éplacement\\n📍 DEPLACEMENT\\n\\n⚽ Allez les Canaris ! 💛💚
+URL:https://www.fcnantes.com/
 LOCATION:DEPLACEMENT
 STATUS:CONFIRMED
-CATEGORIES:Ligue 1 McDonald's • Journée 2
+CATEGORIES:Ligue 1 McDonald's • Journée 2,Sport,Football
+TRANSP:OPAQUE
+CLASS:PUBLIC
 END:VEVENT
 BEGIN:VEVENT
-UID:NTAPW-cdZwf08Dm719HQD
+UID:fcn-nantes-vs-auxerre-1756573200000@fcnantes.com
 SUMMARY:NANTES vs AUXERRE
-DTSTAMP:20250724T192623Z
+DTSTAMP:20250724T192927Z
 DTSTART:20250830T170000Z
 DTEND:20250830T190000Z
-DESCRIPTION:Compétition: Ligue 1 McDonald's • Journée 3
+SEQUENCE:0
+DESCRIPTION:🏈 NANTES vs AUXERRE\\n🏆 Ligue 1 McDonald's • Journée 3\\n🏠 Domi
+	cile\\n📍 Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\
+	, France\\n\\n⚽ Allez les Canaris ! 💛💚
+URL:https://www.fcnantes.com/
 LOCATION:Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\,
 	 France
 STATUS:CONFIRMED
-CATEGORIES:Ligue 1 McDonald's • Journée 3
+CATEGORIES:Ligue 1 McDonald's • Journée 3,Sport,Football
+TRANSP:OPAQUE
+CLASS:PUBLIC
 END:VEVENT
 BEGIN:VEVENT
-UID:cYWhzTb64I-zLT7niM3o6
+UID:fcn-nantes-vs-nice-1757635200000@fcnantes.com
 SUMMARY:NANTES vs NICE
-DTSTAMP:20250724T192623Z
+DTSTAMP:20250724T192927Z
 DTSTART:20250912T000000Z
 DTEND:20250912T020000Z
-DESCRIPTION:Compétition: Ligue 1 McDonald's • Journée 4
+SEQUENCE:0
+DESCRIPTION:🏈 NANTES vs NICE\\n🏆 Ligue 1 McDonald's • Journée 4\\n✈️ Déplace
+	ment\\n📍 DEPLACEMENT\\n\\n⚽ Allez les Canaris ! 💛💚
+URL:https://www.fcnantes.com/
 LOCATION:DEPLACEMENT
 STATUS:CONFIRMED
-CATEGORIES:Ligue 1 McDonald's • Journée 4
+CATEGORIES:Ligue 1 McDonald's • Journée 4,Sport,Football
+TRANSP:OPAQUE
+CLASS:PUBLIC
 END:VEVENT
 BEGIN:VEVENT
-UID:wTNT5Eeh7siO4Dce3DjYK
+UID:fcn-nantes-vs-rennes-1758240000000@fcnantes.com
 SUMMARY:NANTES vs RENNES
-DTSTAMP:20250724T192623Z
+DTSTAMP:20250724T192927Z
 DTSTART:20250919T000000Z
 DTEND:20250919T020000Z
-DESCRIPTION:Compétition: Ligue 1 McDonald's • Journée 5
+SEQUENCE:0
+DESCRIPTION:🏈 NANTES vs RENNES\\n🏆 Ligue 1 McDonald's • Journée 5\\n🏠 Domic
+	ile\\n📍 Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\,
+	 France\\n\\n⚽ Allez les Canaris ! 💛💚
+URL:https://www.fcnantes.com/
 LOCATION:Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\,
 	 France
 STATUS:CONFIRMED
-CATEGORIES:Ligue 1 McDonald's • Journée 5
+CATEGORIES:Ligue 1 McDonald's • Journée 5,Sport,Football
+TRANSP:OPAQUE
+CLASS:PUBLIC
 END:VEVENT
 BEGIN:VEVENT
-UID:8-axYYA8qjSTTcw9qZDNq
+UID:fcn-nantes-vs-toulouse-1758844800000@fcnantes.com
 SUMMARY:NANTES vs TOULOUSE
-DTSTAMP:20250724T192623Z
+DTSTAMP:20250724T192927Z
 DTSTART:20250926T000000Z
 DTEND:20250926T020000Z
-DESCRIPTION:Compétition: Ligue 1 McDonald's • Journée 6
+SEQUENCE:0
+DESCRIPTION:🏈 NANTES vs TOULOUSE\\n🏆 Ligue 1 McDonald's • Journée 6\\n✈️ Dép
+	lacement\\n📍 DEPLACEMENT\\n\\n⚽ Allez les Canaris ! 💛💚
+URL:https://www.fcnantes.com/
 LOCATION:DEPLACEMENT
 STATUS:CONFIRMED
-CATEGORIES:Ligue 1 McDonald's • Journée 6
+CATEGORIES:Ligue 1 McDonald's • Journée 6,Sport,Football
+TRANSP:OPAQUE
+CLASS:PUBLIC
 END:VEVENT
 BEGIN:VEVENT
-UID:rOv956P5a9Q8TceLwzlBf
+UID:fcn-nantes-vs-brest-1759449600000@fcnantes.com
 SUMMARY:NANTES vs BREST
-DTSTAMP:20250724T192623Z
+DTSTAMP:20250724T192927Z
 DTSTART:20251003T000000Z
 DTEND:20251003T020000Z
-DESCRIPTION:Compétition: Ligue 1 McDonald's • Journée 7
+SEQUENCE:0
+DESCRIPTION:🏈 NANTES vs BREST\\n🏆 Ligue 1 McDonald's • Journée 7\\n✈️ Déplac
+	ement\\n📍 DEPLACEMENT\\n\\n⚽ Allez les Canaris ! 💛💚
+URL:https://www.fcnantes.com/
 LOCATION:DEPLACEMENT
 STATUS:CONFIRMED
-CATEGORIES:Ligue 1 McDonald's • Journée 7
+CATEGORIES:Ligue 1 McDonald's • Journée 7,Sport,Football
+TRANSP:OPAQUE
+CLASS:PUBLIC
 END:VEVENT
 BEGIN:VEVENT
-UID:Klpr7hb5L0rowTKd5o_dZ
+UID:fcn-nantes-vs-lille-1760659200000@fcnantes.com
 SUMMARY:NANTES vs LILLE
-DTSTAMP:20250724T192623Z
+DTSTAMP:20250724T192927Z
 DTSTART:20251017T000000Z
 DTEND:20251017T020000Z
-DESCRIPTION:Compétition: Ligue 1 McDonald's • Journée 8
+SEQUENCE:0
+DESCRIPTION:🏈 NANTES vs LILLE\\n🏆 Ligue 1 McDonald's • Journée 8\\n🏠 Domici
+	le\\n📍 Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\, 
+	France\\n\\n⚽ Allez les Canaris ! 💛💚
+URL:https://www.fcnantes.com/
 LOCATION:Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\,
 	 France
 STATUS:CONFIRMED
-CATEGORIES:Ligue 1 McDonald's • Journée 8
+CATEGORIES:Ligue 1 McDonald's • Journée 8,Sport,Football
+TRANSP:OPAQUE
+CLASS:PUBLIC
 END:VEVENT
 BEGIN:VEVENT
-UID:G7bnVkMIjG-ouZ3WqXcGE
+UID:fcn-nantes-vs-parisfc-1761264000000@fcnantes.com
 SUMMARY:NANTES vs PARIS FC
-DTSTAMP:20250724T192623Z
+DTSTAMP:20250724T192927Z
 DTSTART:20251024T000000Z
 DTEND:20251024T020000Z
-DESCRIPTION:Compétition: Ligue 1 McDonald's • Journée 9
+SEQUENCE:0
+DESCRIPTION:🏈 NANTES vs PARIS FC\\n🏆 Ligue 1 McDonald's • Journée 9\\n✈️ Dép
+	lacement\\n📍 DEPLACEMENT\\n\\n⚽ Allez les Canaris ! 💛💚
+URL:https://www.fcnantes.com/
 LOCATION:DEPLACEMENT
 STATUS:CONFIRMED
-CATEGORIES:Ligue 1 McDonald's • Journée 9
+CATEGORIES:Ligue 1 McDonald's • Journée 9,Sport,Football
+TRANSP:OPAQUE
+CLASS:PUBLIC
 END:VEVENT
 BEGIN:VEVENT
-UID:YdOKcv8wJEZl__MOMd-Gn
+UID:fcn-nantes-vs-lehavre-1762473600000@fcnantes.com
 SUMMARY:NANTES vs LE HAVRE
-DTSTAMP:20250724T192623Z
+DTSTAMP:20250724T192927Z
 DTSTART:20251107T000000Z
 DTEND:20251107T020000Z
-DESCRIPTION:Compétition: Ligue 1 McDonald's • Journée 12
+SEQUENCE:0
+DESCRIPTION:🏈 NANTES vs LE HAVRE\\n🏆 Ligue 1 McDonald's • Journée 12\\n✈️ Dé
+	placement\\n📍 DEPLACEMENT\\n\\n⚽ Allez les Canaris ! 💛💚
+URL:https://www.fcnantes.com/
 LOCATION:DEPLACEMENT
 STATUS:CONFIRMED
-CATEGORIES:Ligue 1 McDonald's • Journée 12
+CATEGORIES:Ligue 1 McDonald's • Journée 12,Sport,Football
+TRANSP:OPAQUE
+CLASS:PUBLIC
 END:VEVENT
 BEGIN:VEVENT
-UID:3XUyVmsbzJ1HQQ08M5O6H
+UID:fcn-nantes-vs-lorient-1763683200000@fcnantes.com
 SUMMARY:NANTES vs LORIENT
-DTSTAMP:20250724T192623Z
+DTSTAMP:20250724T192927Z
 DTSTART:20251121T000000Z
 DTEND:20251121T020000Z
-DESCRIPTION:Compétition: Ligue 1 McDonald's • Journée 13
+SEQUENCE:0
+DESCRIPTION:🏈 NANTES vs LORIENT\\n🏆 Ligue 1 McDonald's • Journée 13\\n🏠 Dom
+	icile\\n📍 Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes
+	\, France\\n\\n⚽ Allez les Canaris ! 💛💚
+URL:https://www.fcnantes.com/
 LOCATION:Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\,
 	 France
 STATUS:CONFIRMED
-CATEGORIES:Ligue 1 McDonald's • Journée 13
+CATEGORIES:Ligue 1 McDonald's • Journée 13,Sport,Football
+TRANSP:OPAQUE
+CLASS:PUBLIC
 END:VEVENT
 BEGIN:VEVENT
-UID:r9kikNmSTMZn-Jiti04U6
+UID:fcn-nantes-vs-marseille-1767312000000@fcnantes.com
 SUMMARY:NANTES vs MARSEILLE
-DTSTAMP:20250724T192623Z
+DTSTAMP:20250724T192927Z
 DTSTART:20260102T000000Z
 DTEND:20260102T020000Z
-DESCRIPTION:Compétition: Ligue 1 McDonald's • Journée 4
+SEQUENCE:0
+DESCRIPTION:🏈 NANTES vs MARSEILLE\\n🏆 Ligue 1 McDonald's • Journée 4\\n✈️ Dé
+	placement\\n📍 DEPLACEMENT\\n\\n⚽ Allez les Canaris ! 💛💚
+URL:https://www.fcnantes.com/
 LOCATION:DEPLACEMENT
 STATUS:CONFIRMED
-CATEGORIES:Ligue 1 McDonald's • Journée 4
+CATEGORIES:Ligue 1 McDonald's • Journée 4,Sport,Football
+TRANSP:OPAQUE
+CLASS:PUBLIC
 END:VEVENT
 BEGIN:VEVENT
-UID:vhhkMbG_CXshSE9LaDVh2
+UID:fcn-nantes-vs-parisfc-1768521600000@fcnantes.com
 SUMMARY:NANTES vs PARIS FC
-DTSTAMP:20250724T192623Z
+DTSTAMP:20250724T192927Z
 DTSTART:20260116T000000Z
 DTEND:20260116T020000Z
-DESCRIPTION:Compétition: Ligue 1 McDonald's • Journée 18
+SEQUENCE:0
+DESCRIPTION:🏈 NANTES vs PARIS FC\\n🏆 Ligue 1 McDonald's • Journée 18\\n🏠 Do
+	micile\\n📍 Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nante
+	s\, France\\n\\n⚽ Allez les Canaris ! 💛💚
+URL:https://www.fcnantes.com/
 LOCATION:Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\,
 	 France
 STATUS:CONFIRMED
-CATEGORIES:Ligue 1 McDonald's • Journée 18
+CATEGORIES:Ligue 1 McDonald's • Journée 18,Sport,Football
+TRANSP:OPAQUE
+CLASS:PUBLIC
 END:VEVENT
 BEGIN:VEVENT
-UID:4Kb4frhLqErOYA4O7r8JI
+UID:fcn-nantes-vs-nice-1769126400000@fcnantes.com
 SUMMARY:NANTES vs NICE
-DTSTAMP:20250724T192623Z
+DTSTAMP:20250724T192927Z
 DTSTART:20260123T000000Z
 DTEND:20260123T020000Z
-DESCRIPTION:Compétition: Ligue 1 McDonald's • Journée 19
+SEQUENCE:0
+DESCRIPTION:🏈 NANTES vs NICE\\n🏆 Ligue 1 McDonald's • Journée 19\\n🏠 Domici
+	le\\n📍 Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\, 
+	France\\n\\n⚽ Allez les Canaris ! 💛💚
+URL:https://www.fcnantes.com/
 LOCATION:Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\,
 	 France
 STATUS:CONFIRMED
-CATEGORIES:Ligue 1 McDonald's • Journée 19
+CATEGORIES:Ligue 1 McDonald's • Journée 19,Sport,Football
+TRANSP:OPAQUE
+CLASS:PUBLIC
 END:VEVENT
 BEGIN:VEVENT
-UID:2YSn_bb-y6KFtDZwk8dfl
+UID:fcn-nantes-vs-angers-1772755200000@fcnantes.com
 SUMMARY:NANTES vs ANGERS
-DTSTAMP:20250724T192623Z
+DTSTAMP:20250724T192927Z
 DTSTART:20260306T000000Z
 DTEND:20260306T020000Z
-DESCRIPTION:Compétition: Ligue 1 McDonald's • Journée 25
+SEQUENCE:0
+DESCRIPTION:🏈 NANTES vs ANGERS\\n🏆 Ligue 1 McDonald's • Journée 25\\n🏠 Domi
+	cile\\n📍 Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\
+	, France\\n\\n⚽ Allez les Canaris ! 💛💚
+URL:https://www.fcnantes.com/
 LOCATION:Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\,
 	 France
 STATUS:CONFIRMED
-CATEGORIES:Ligue 1 McDonald's • Journée 25
+CATEGORIES:Ligue 1 McDonald's • Journée 25,Sport,Football
+TRANSP:OPAQUE
+CLASS:PUBLIC
 END:VEVENT
 BEGIN:VEVENT
-UID:wqF17fhiqBgCk1bHrhRXP
+UID:fcn-nantes-vs-parissg-1773360000000@fcnantes.com
 SUMMARY:NANTES vs PARIS SG
-DTSTAMP:20250724T192623Z
+DTSTAMP:20250724T192927Z
 DTSTART:20260313T000000Z
 DTEND:20260313T020000Z
-DESCRIPTION:Compétition: Ligue 1 McDonald's • Journée 26
+SEQUENCE:0
+DESCRIPTION:🏈 NANTES vs PARIS SG\\n🏆 Ligue 1 McDonald's • Journée 26\\n✈️ Dé
+	placement\\n📍 DEPLACEMENT\\n\\n⚽ Allez les Canaris ! 💛💚
+URL:https://www.fcnantes.com/
 LOCATION:DEPLACEMENT
 STATUS:CONFIRMED
-CATEGORIES:Ligue 1 McDonald's • Journée 26
+CATEGORIES:Ligue 1 McDonald's • Journée 26,Sport,Football
+TRANSP:OPAQUE
+CLASS:PUBLIC
 END:VEVENT
 BEGIN:VEVENT
-UID:EIE8M7ggc68jSPrIryAeo
+UID:fcn-nantes-vs-strasbourg-1773964800000@fcnantes.com
 SUMMARY:NANTES vs STRASBOURG
-DTSTAMP:20250724T192623Z
+DTSTAMP:20250724T192927Z
 DTSTART:20260320T000000Z
 DTEND:20260320T020000Z
-DESCRIPTION:Compétition: Ligue 1 McDonald's • Journée 27
+SEQUENCE:0
+DESCRIPTION:🏈 NANTES vs STRASBOURG\\n🏆 Ligue 1 McDonald's • Journée 27\\n🏠 
+	Domicile\\n📍 Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nan
+	tes\, France\\n\\n⚽ Allez les Canaris ! 💛💚
+URL:https://www.fcnantes.com/
 LOCATION:Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\,
 	 France
 STATUS:CONFIRMED
-CATEGORIES:Ligue 1 McDonald's • Journée 27
+CATEGORIES:Ligue 1 McDonald's • Journée 27,Sport,Football
+TRANSP:OPAQUE
+CLASS:PUBLIC
 END:VEVENT
 BEGIN:VEVENT
-UID:uPggF_ASLu8MRVhEMggO9
+UID:fcn-nantes-vs-metz-1772496000000@fcnantes.com
 SUMMARY:NANTES vs METZ
-DTSTAMP:20250724T192623Z
+DTSTAMP:20250724T192927Z
 DTSTART:20260303T000000Z
 DTEND:20260303T020000Z
-DESCRIPTION:Compétition: Ligue 1 McDonald's • Journée 28
+SEQUENCE:0
+DESCRIPTION:🏈 NANTES vs METZ\\n🏆 Ligue 1 McDonald's • Journée 28\\n✈️ Déplac
+	ement\\n📍 DEPLACEMENT\\n\\n⚽ Allez les Canaris ! 💛💚
+URL:https://www.fcnantes.com/
 LOCATION:DEPLACEMENT
 STATUS:CONFIRMED
-CATEGORIES:Ligue 1 McDonald's • Journée 28
+CATEGORIES:Ligue 1 McDonald's • Journée 28,Sport,Football
+TRANSP:OPAQUE
+CLASS:PUBLIC
 END:VEVENT
 BEGIN:VEVENT
-UID:zXHVeGANXmyAYEHlY--wZ
+UID:fcn-nantes-vs-auxerre-1775779200000@fcnantes.com
 SUMMARY:NANTES vs AUXERRE
-DTSTAMP:20250724T192623Z
+DTSTAMP:20250724T192927Z
 DTSTART:20260410T000000Z
 DTEND:20260410T020000Z
-DESCRIPTION:Compétition: Ligue 1 McDonald's • Journée 29
+SEQUENCE:0
+DESCRIPTION:🏈 NANTES vs AUXERRE\\n🏆 Ligue 1 McDonald's • Journée 29\\n✈️ Dép
+	lacement\\n📍 DEPLACEMENT\\n\\n⚽ Allez les Canaris ! 💛💚
+URL:https://www.fcnantes.com/
 LOCATION:DEPLACEMENT
 STATUS:CONFIRMED
-CATEGORIES:Ligue 1 McDonald's • Journée 29
+CATEGORIES:Ligue 1 McDonald's • Journée 29,Sport,Football
+TRANSP:OPAQUE
+CLASS:PUBLIC
 END:VEVENT
 BEGIN:VEVENT
-UID:lKhjLFk0-0MBY51yduVAt
+UID:fcn-nantes-vs-brest-1776384000000@fcnantes.com
 SUMMARY:NANTES vs BREST
-DTSTAMP:20250724T192623Z
+DTSTAMP:20250724T192927Z
 DTSTART:20260417T000000Z
 DTEND:20260417T020000Z
-DESCRIPTION:Compétition: Ligue 1 McDonald's • Journée 30
+SEQUENCE:0
+DESCRIPTION:🏈 NANTES vs BREST\\n🏆 Ligue 1 McDonald's • Journée 30\\n🏠 Domic
+	ile\\n📍 Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\,
+	 France\\n\\n⚽ Allez les Canaris ! 💛💚
+URL:https://www.fcnantes.com/
 LOCATION:Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\,
 	 France
 STATUS:CONFIRMED
-CATEGORIES:Ligue 1 McDonald's • Journée 30
+CATEGORIES:Ligue 1 McDonald's • Journée 30,Sport,Football
+TRANSP:OPAQUE
+CLASS:PUBLIC
 END:VEVENT
 BEGIN:VEVENT
-UID:5FKCNHljegnxUuK8SwJEI
+UID:fcn-nantes-vs-rennes-1776988800000@fcnantes.com
 SUMMARY:NANTES vs RENNES
-DTSTAMP:20250724T192623Z
+DTSTAMP:20250724T192927Z
 DTSTART:20260424T000000Z
 DTEND:20260424T020000Z
-DESCRIPTION:Compétition: Ligue 1 McDonald's • Journée 31
+SEQUENCE:0
+DESCRIPTION:🏈 NANTES vs RENNES\\n🏆 Ligue 1 McDonald's • Journée 31\\n✈️ Dépl
+	acement\\n📍 DEPLACEMENT\\n\\n⚽ Allez les Canaris ! 💛💚
+URL:https://www.fcnantes.com/
 LOCATION:DEPLACEMENT
 STATUS:CONFIRMED
-CATEGORIES:Ligue 1 McDonald's • Journée 31
+CATEGORIES:Ligue 1 McDonald's • Journée 31,Sport,Football
+TRANSP:OPAQUE
+CLASS:PUBLIC
 END:VEVENT
 BEGIN:VEVENT
-UID:iGkifwK8nbc1q_hOhxtwo
+UID:fcn-nantes-vs-marseille-1777680000000@fcnantes.com
 SUMMARY:NANTES vs MARSEILLE
-DTSTAMP:20250724T192623Z
+DTSTAMP:20250724T192927Z
 DTSTART:20260502T000000Z
 DTEND:20260502T020000Z
-DESCRIPTION:Compétition: Ligue 1 McDonald's • Journée 32
+SEQUENCE:0
+DESCRIPTION:🏈 NANTES vs MARSEILLE\\n🏆 Ligue 1 McDonald's • Journée 32\\n🏠 D
+	omicile\\n📍 Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nant
+	es\, France\\n\\n⚽ Allez les Canaris ! 💛💚
+URL:https://www.fcnantes.com/
 LOCATION:Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\,
 	 France
 STATUS:CONFIRMED
-CATEGORIES:Ligue 1 McDonald's • Journée 32
+CATEGORIES:Ligue 1 McDonald's • Journée 32,Sport,Football
+TRANSP:OPAQUE
+CLASS:PUBLIC
 END:VEVENT
 END:VCALENDAR
