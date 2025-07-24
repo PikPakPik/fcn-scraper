@@ -197,9 +197,22 @@ class FCNantesScraper {
           location = 'Stade de la Beaujoire, 330 Route de Saint-Joseph, 44300 Nantes, France';
         }
         
+        // Générer un UID unique basé sur le match
+        const uid = `fcn-${match.homeTeam.toLowerCase().replace(/\s+/g, '')}-vs-${match.awayTeam.toLowerCase().replace(/\s+/g, '')}-${startDate.getTime()}@fcnantes.com`;
+        
+        // Créer une description riche pour tous les clients
+        const richDescription = [
+          `🏈 ${title}`,
+          `🏆 ${match.competition}`,
+          match.isHome ? '🏠 Domicile' : '✈️ Déplacement',
+          `📍 ${location}`,
+          '',
+          '⚽ Allez les Canaris ! 💛💚'
+        ].join('\\n');
+        
         return {
           title,
-          description,
+          description: richDescription,
           start: [
             startDate.getFullYear(),
             startDate.getMonth() + 1,
@@ -215,8 +228,14 @@ class FCNantesScraper {
             endDate.getMinutes()
           ] as [number, number, number, number, number],
           location,
-          categories: [match.competition],
+          categories: [match.competition, 'Sport', 'Football'],
           status: 'CONFIRMED',
+          uid,
+          productId: 'fcnantes-scraper//FC Nantes Calendar//FR',
+          classification: 'PUBLIC',
+          transp: 'OPAQUE',
+          sequence: 0,
+          url: 'https://www.fcnantes.com/'
         };
       });
     
@@ -232,9 +251,39 @@ class FCNantesScraper {
       return;
     }
     
-    writeFileSync(filename, value!);
+    // Améliorer le fichier ICS avec des métadonnées pour Apple Calendar
+    let icsContent = value!;
+    
+    // Ajouter des propriétés de calendrier pour tous les clients
+    icsContent = icsContent.replace(
+      'BEGIN:VCALENDAR',
+      `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//FC Nantes Scraper//FC Nantes Calendar//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:FC Nantes - Calendrier des matchs
+X-WR-CALDESC:Calendrier automatique des matchs du FC Nantes
+X-WR-TIMEZONE:Europe/Paris
+X-PUBLISHED-TTL:PT1H
+NAME:FC Nantes - Calendrier des matchs
+DESCRIPTION:Calendrier automatique des matchs du FC Nantes
+COLOR:#FFE000
+X-APPLE-CALENDAR-COLOR:#FFE000
+X-OUTLOOK-COLOR:#FFE000
+REFRESH-INTERVAL:PT1H
+X-WR-RELCALID:fcnantes-calendar
+SOURCE;VALUE=URI:https://raw.githubusercontent.com/[USERNAME]/[REPOSITORY]/main/calendrier-fcnantes.ics`
+    );
+    
+    writeFileSync(filename, icsContent);
     console.log(`✅ Fichier ICS généré: ${filename}`);
     console.log(`📊 ${events.length} événements ajoutés au calendrier`);
+    console.log(`🔄 Compatibilité optimisée pour:`)
+    console.log(`   📱 Apple Calendar (iPhone/iPad/Mac)`);
+    console.log(`   🌐 Google Calendar`);
+    console.log(`   💼 Microsoft Outlook`);
+    console.log(`   📅 Autres clients CalDAV/ICS`);
   }
 
   async run(): Promise<void> {
