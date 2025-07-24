@@ -1,0 +1,86 @@
+name: 📅 Scrape FC Nantes Calendar
+
+on:
+  schedule:
+    # Exécuter tous les jours à 8h00 UTC (9h00 ou 10h00 en France selon la saison)
+    - cron: '0 8 * * *'
+  # Permettre l'exécution manuelle
+  workflow_dispatch:
+  # Exécuter aussi sur push pour tester
+  push:
+    branches: [ main, master ]
+
+jobs:
+  scrape-calendar:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 🛎️ Checkout code
+        uses: actions/checkout@v4
+        with:
+          # Nécessaire pour pouvoir commit les changements
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: 📥 Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
+
+      - name: 📚 Install dependencies
+        run: pnpm install
+
+      - name: 🏈 Scrape FC Nantes calendar
+        run: pnpm run scrape
+
+      - name: 📄 Check if calendar file was generated
+        run: |
+          if [ -f "calendrier-fcnantes.ics" ]; then
+            echo "✅ Calendar file generated successfully"
+            ls -la calendrier-fcnantes.ics
+          else
+            echo "❌ Calendar file not found"
+            exit 1
+          fi
+
+      - name: 📊 Add metadata to calendar file
+        run: |
+          # Ajouter des informations de build au début du fichier
+          TEMP_FILE=$(mktemp)
+          echo "# FC Nantes Calendar - Généré automatiquement" > "$TEMP_FILE"
+          echo "# Dernière mise à jour: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> "$TEMP_FILE"
+          echo "# Source: https://billetterie.fcnantes.com/fr/prochains-matchs/calendrier" >> "$TEMP_FILE"
+          echo "# Repository: ${{ github.repository }}" >> "$TEMP_FILE"
+          echo "" >> "$TEMP_FILE"
+          cat calendrier-fcnantes.ics >> "$TEMP_FILE"
+          mv "$TEMP_FILE" calendrier-fcnantes.ics
+
+      - name: 📝 Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          # Ajouter le fichier .ics
+          git add calendrier-fcnantes.ics
+          
+          # Vérifier s'il y a des changements
+          if git diff --staged --quiet; then
+            echo "📋 Aucun changement détecté dans le calendrier"
+          else
+            echo "🔄 Mise à jour du calendrier détectée"
+            git commit -m "🏈 Mise à jour automatique du calendrier FC Nantes - $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git push
+            echo "✅ Calendrier mis à jour et publié"
+          fi
+
+      - name: 📤 Upload calendar as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: fc-nantes-calendar
+          path: calendrier-fcnantes.ics
+          retention-days: 30 
