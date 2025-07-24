@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer';
 import * as cheerio from 'cheerio';
 import { Match, ScrapingConfig, ScrapingStats } from '../types/match.js';
 import { DEFAULT_CONFIG, CSS_SELECTORS, PUPPETEER_ARGS } from '../utils/constants.js';
-import { parseApproximateDate } from '../utils/date-parser.js';
+import { parseApproximateDate, isDefiniteDate } from '../utils/date-parser.js';
 import { logger } from '../utils/logger.js';
 
 /**
@@ -100,7 +100,8 @@ export class FCNantesScraper {
       dateTime: dateInfo.dateTime,
       venue,
       isHome,
-      hasDefiniteDate: dateInfo.hasDefiniteDate
+      hasDefiniteDate: dateInfo.hasDefiniteDate,
+      hasDefiniteTime: dateInfo.hasDefiniteTime
     };
   }
 
@@ -197,29 +198,33 @@ export class FCNantesScraper {
     dateTime: Date | null;
     dateString: string | null;
     hasDefiniteDate: boolean;
+    hasDefiniteTime: boolean;
   } {
     const timeElement = $card.find(CSS_SELECTORS.dateTime);
     
     if (timeElement.length > 0) {
-      // Date précise disponible
+      // Date et heure précises disponibles
       const datetime = timeElement.attr('datetime');
       if (datetime) {
         return {
           dateTime: new Date(datetime),
           dateString: timeElement.text().trim(),
-          hasDefiniteDate: true
+          hasDefiniteDate: true,
+          hasDefiniteTime: true
         };
       }
     }
 
-    // Date approximative seulement
+    // Date sans heure précise
     const dateText = $card.find(CSS_SELECTORS.dateText).text().trim();
     const approximateDate = parseApproximateDate(dateText);
+    const isDefiniteDateText = isDefiniteDate(dateText);
 
     return {
       dateTime: approximateDate,
       dateString: dateText,
-      hasDefiniteDate: false
+      hasDefiniteDate: isDefiniteDateText,
+      hasDefiniteTime: false
     };
   }
 
@@ -227,13 +232,15 @@ export class FCNantesScraper {
    * Génère des statistiques de scraping
    */
   generateStats(matches: Match[]): ScrapingStats {
-    const withDefiniteDate = matches.filter(m => m.hasDefiniteDate).length;
+    const withDefiniteDateTime = matches.filter(m => m.hasDefiniteTime).length;
+    const withDefiniteDate = matches.filter(m => m.hasDefiniteDate && !m.hasDefiniteTime).length;
     const withApproximateDate = matches.filter(m => !m.hasDefiniteDate && m.dateTime).length;
     const withAnyDate = matches.filter(m => m.dateTime).length;
     const excluded = matches.filter(m => !m.dateTime).length;
 
     return {
       total: matches.length,
+      withDefiniteDateTime,
       withDefiniteDate,
       withApproximateDate,
       withAnyDate,
@@ -248,16 +255,26 @@ export class FCNantesScraper {
     const stats = this.generateStats(matches);
     
     logger.summary(`Résumé: ${stats.total} matchs trouvés`, {
-      'avec date précise': stats.withDefiniteDate,
+      'avec date et heure précises': stats.withDefiniteDateTime,
+      'avec date précise (sans heure)': stats.withDefiniteDate,
       'avec date approximative': stats.withApproximateDate,
-      'total avec date (précise ou approximative)': stats.withAnyDate
+      'total avec date': stats.withAnyDate
     });
 
-    // Afficher les matchs avec date à confirmer
-    const pendingMatches = matches.filter(m => !m.hasDefiniteDate && m.dateTime);
-    if (pendingMatches.length > 0) {
-      logger.warn('Matchs avec date à confirmer:');
-      pendingMatches.forEach(match => {
+    // Afficher les matchs avec date précise mais sans heure
+    const dateOnlyMatches = matches.filter(m => m.hasDefiniteDate && !m.hasDefiniteTime);
+    if (dateOnlyMatches.length > 0) {
+      logger.info('Matchs avec date précise (heure à confirmer):');
+      dateOnlyMatches.forEach(match => {
+        logger.info(`${match.homeTeam} vs ${match.awayTeam} (${match.date})`);
+      });
+    }
+
+    // Afficher les matchs avec date approximative
+    const approximateMatches = matches.filter(m => !m.hasDefiniteDate && m.dateTime);
+    if (approximateMatches.length > 0) {
+      logger.warn('Matchs avec date approximative:');
+      approximateMatches.forEach(match => {
         logger.info(`${match.homeTeam} vs ${match.awayTeam} (${match.date})`);
       });
     }

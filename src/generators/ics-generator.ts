@@ -2,7 +2,7 @@ import { createEvents, EventAttributes } from 'ics';
 import { writeFileSync } from 'fs';
 import { Match, ICSGenerationOptions } from '../types/match.js';
 import { BEAUJOIRE_ADDRESS, MATCH_DURATION_HOURS, FC_NANTES_COLORS, APPROXIMATE_EVENT_DURATION_DAYS } from '../utils/constants.js';
-import { formatDateTime, formatDateOnly } from '../utils/date-parser.js';
+import { formatDateTime, formatDateOnly, calculateEventDuration } from '../utils/date-parser.js';
 import { logger } from '../utils/logger.js';
 
 /**
@@ -77,14 +77,20 @@ export class ICSGenerator {
     let endDate: Date;
     let isAllDay = false;
 
-    if (match.hasDefiniteDate) {
+    if (match.hasDefiniteTime) {
       // Date et heure précises -> événement de 2h
       endDate = new Date(startDate.getTime() + MATCH_DURATION_HOURS * 60 * 60 * 1000);
-    } else {
-      // Date approximative -> événement de 3 jours (week-end)
+    } else if (match.hasDefiniteDate) {
+      // Date précise sans heure -> événement toute la journée (1 jour)
       isAllDay = true;
       endDate = new Date(startDate);
-      endDate.setDate(endDate.getDate() + APPROXIMATE_EVENT_DURATION_DAYS);
+      endDate.setDate(endDate.getDate() + 1); // 1 jour seulement
+    } else {
+      // Date approximative -> calculer la durée selon le texte de date
+      isAllDay = true;
+      endDate = new Date(startDate);
+      const duration = calculateEventDuration(match.date || '', startDate);
+      endDate.setDate(endDate.getDate() + duration);
     }
 
     const baseEvent = {

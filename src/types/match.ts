@@ -10,6 +10,7 @@ export interface Match {
   venue: string;
   isHome: boolean;
   hasDefiniteDate: boolean;
+  hasDefiniteTime: boolean; // Nouvelle propriété pour distinguer date précise avec/sans heure
 }
 
 /**
@@ -50,8 +51,9 @@ export interface CSSSelectors {
  */
 export interface ScrapingStats {
   total: number;
-  withDefiniteDate: number;
-  withApproximateDate: number;
+  withDefiniteDateTime: number; // Date + heure précises
+  withDefiniteDate: number; // Date précise sans heure
+  withApproximateDate: number; // Date approximative
   withAnyDate: number;
   excluded: number;
 } 
