@@ -199,12 +199,56 @@ class FCNantesScraper {
     if (teams.length !== 2) return null;
 
     const [team1, team2] = teams;
+    
+    // Vérifier si c'est un match à domicile ou à l'extérieur
     const isHome = $card.hasClass('matchCard--home');
+    const isAway = $card.hasClass('matchCard--away');
+    
+    // Déterminer si Nantes joue à domicile en cherchant "NANTES" dans les noms
+    const nantesIsFirst = team1.toUpperCase().includes('NANTES');
+    const nantesIsSecond = team2.toUpperCase().includes('NANTES');
+    
+    let homeTeam: string;
+    let awayTeam: string;
+    let finalIsHome: boolean;
+    
+    if (nantesIsFirst) {
+      // NANTES est la première équipe
+      if (isHome || (!isHome && !isAway)) {
+        // Match à domicile : NANTES vs ADVERSAIRE
+        homeTeam = team1; // NANTES
+        awayTeam = team2; // ADVERSAIRE
+        finalIsHome = true;
+      } else {
+        // Match à l'extérieur : ADVERSAIRE vs NANTES (on inverse)
+        homeTeam = team2; // ADVERSAIRE
+        awayTeam = team1; // NANTES
+        finalIsHome = false;
+      }
+    } else if (nantesIsSecond) {
+      // NANTES est la deuxième équipe
+      if (isAway) {
+        // Match à l'extérieur : ADVERSAIRE vs NANTES
+        homeTeam = team1; // ADVERSAIRE
+        awayTeam = team2; // NANTES
+        finalIsHome = false;
+      } else {
+        // Match à domicile : NANTES vs ADVERSAIRE (on inverse)
+        homeTeam = team2; // NANTES
+        awayTeam = team1; // ADVERSAIRE
+        finalIsHome = true;
+      }
+    } else {
+      // Fallback si NANTES n'est pas trouvé
+      homeTeam = team1;
+      awayTeam = team2;
+      finalIsHome = isHome;
+    }
 
     return {
-      homeTeam: isHome ? team1 : team2,
-      awayTeam: isHome ? team2 : team1,
-      isHome
+      homeTeam,
+      awayTeam,
+      isHome: finalIsHome
     };
   }
 
@@ -322,7 +366,11 @@ class FCNantesScraper {
    */
   private createEventFromMatch(match: Match): EventAttributes {
     const startDate = match.dateTime!;
+    
+    // Le titre est déjà formaté correctement selon domicile/extérieur
+    // Domicile: NANTES vs ADVERSAIRE | Extérieur: ADVERSAIRE vs NANTES
     const title = `${match.homeTeam} vs ${match.awayTeam}`;
+    
     const location = this.formatLocation(match.venue);
     const description = this.formatDescription(match, location);
     const uid = this.generateUID(match, startDate);
