@@ -35,6 +35,9 @@ jobs:
       - name: 📚 Install dependencies
         run: pnpm install
 
+      - name: 🌐 Install Chrome for Puppeteer
+        run: npx puppeteer browsers install chrome
+
       - name: 🏈 Scrape FC Nantes calendar
         run: pnpm run scrape
 
