@@ -1,16 +1,31 @@
 {
   "name": "fcn-scraper",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "scrape": "ts-node scraper.ts",
-    "start": "ts-node scraper.ts"
+  "description": "Scraper automatisé pour le calendrier des matchs du FC Nantes",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "scrape": "tsx src/index.ts",
+    "clean": "rm -rf dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["fc-nantes", "football", "calendar", "ics", "scraping", "puppeteer"],
+  "author": "PikPakPik",
+  "license": "MIT",
   "packageManager": "pnpm@10.12.4",
   "dependencies": {
     "@types/puppeteer": "^7.0.4",
@@ -23,6 +38,7 @@
     "@types/cheerio": "^1.0.0",
     "@types/node": "^24.1.0",
     "ts-node": "^10.9.2",
+    "tsx": "^4.7.1",
     "typescript": "^5.8.3"
   }
 }
