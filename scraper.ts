@@ -194,7 +194,7 @@ class FCNantesScraper {
         // Convertir le lieu en adresse complète si c'est la Beaujoire
         let location = match.venue;
         if (match.venue && match.venue.toUpperCase().includes('BEAUJOIRE')) {
-          location = '333 Rte de Saint-Joseph, 44300 Nantes';
+          location = 'Stade de la Beaujoire, 330 Route de Saint-Joseph, 44300 Nantes, France';
         }
         
         return {

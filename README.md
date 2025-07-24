@@ -6,7 +6,7 @@ Un scraper automatisé qui récupère le calendrier des matchs du FC Nantes depu
 
 - ⚡ Scraping automatique du calendrier FC Nantes
 - 📅 Génération de fichier .ics compatible avec tous les calendriers
-- 🔄 Mise à jour automatique via GitHub Actions (tous les jours à 8h UTC)
+- 🔄 Mise à jour automatique via GitHub Actions (toutes les heures)
 - 🏟️ Conversion automatique du nom "Beaujoire" en adresse complète
 - 🧹 Nettoyage des doublons dans les noms de compétitions
 - 📍 Support des matchs à domicile et à l'extérieur
@@ -71,7 +71,7 @@ Le scraper récupère automatiquement tous les types de matchs :
 ## ⚙️ Configuration GitHub Actions
 
 Le workflow GitHub Actions :
-- 🕗 S'exécute automatiquement tous les jours à 8h UTC
+- 🕗 S'exécute automatiquement toutes les heures
 - 🔄 Peut être déclenché manuellement depuis l'onglet "Actions" de GitHub
 - 📝 Commit automatiquement les changements s'il y en a
 - 📦 Archive le fichier .ics comme artifact
