@@ -217,7 +217,6 @@ class FCNantesScraper {
           location,
           categories: [match.competition],
           status: 'CONFIRMED',
-          organizer: { name: 'FC Nantes', email: 'contact@fcnantes.com' }
         };
       });
     
