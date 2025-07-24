@@ -313,7 +313,7 @@ class FCNantesScraper {
    */
   private convertMatchesToEvents(matches: Match[]): EventAttributes[] {
     return matches
-      .filter(match => match.dateTime)
+      .filter(match => match.dateTime) // Inclure tous les matchs avec une date (précise ou approximative)
       .map(match => this.createEventFromMatch(match));
   }
 
@@ -322,28 +322,59 @@ class FCNantesScraper {
    */
   private createEventFromMatch(match: Match): EventAttributes {
     const startDate = match.dateTime!;
-    const endDate = new Date(startDate.getTime() + MATCH_DURATION_HOURS * 60 * 60 * 1000);
-
     const title = `${match.homeTeam} vs ${match.awayTeam}`;
     const location = this.formatLocation(match.venue);
     const description = this.formatDescription(match, location);
     const uid = this.generateUID(match, startDate);
 
-    return {
-      title,
-      description,
-      start: this.formatDateTime(startDate),
-      end: this.formatDateTime(endDate),
-      location,
-      categories: [match.competition, 'Sport', 'Football'],
-      status: 'CONFIRMED',
-      uid,
-      productId: 'fcnantes-scraper//FC Nantes Calendar//FR',
-      classification: 'PUBLIC',
-      transp: 'OPAQUE',
-      sequence: 0,
-      url: 'https://www.fcnantes.com/'
-    };
+    // Déterminer le type d'événement selon la précision de la date
+    let endDate: Date;
+    let isAllDay = false;
+
+    if (match.hasDefiniteDate) {
+      // Date et heure précises -> événement de 2h
+      endDate = new Date(startDate.getTime() + MATCH_DURATION_HOURS * 60 * 60 * 1000);
+    } else {
+      // Date approximative -> événement de 3 jours (week-end)
+      isAllDay = true;
+      endDate = new Date(startDate);
+      endDate.setDate(endDate.getDate() + 3); // 3 jours pour couvrir le week-end
+    }
+
+    if (isAllDay) {
+      // Événement toute la journée (ou plusieurs jours) - pas d'alerte
+      return {
+        title,
+        description,
+        start: this.formatDateOnly(startDate),
+        end: this.formatDateOnly(endDate),
+        location,
+        categories: [match.competition, 'Sport', 'Football'],
+        uid,
+        productId: 'fcnantes-scraper//FC Nantes Calendar//FR',
+        url: 'https://www.fcnantes.com/'
+      } as EventAttributes;
+    } else {
+      // Événement avec heure précise - avec alerte 1h30 avant
+      return {
+        title,
+        description,
+        start: this.formatDateTime(startDate),
+        end: this.formatDateTime(endDate),
+        location,
+        categories: [match.competition, 'Sport', 'Football'],
+        uid,
+        productId: 'fcnantes-scraper//FC Nantes Calendar//FR',
+        url: 'https://www.fcnantes.com/',
+        alarms: [
+          {
+            action: 'display',
+            description: `🏈 Match dans 1h30 : ${title}`,
+            trigger: { minutes: 90, before: true }
+          }
+        ]
+      } as EventAttributes;
+    }
   }
 
   /**
@@ -390,6 +421,17 @@ class FCNantesScraper {
       date.getDate(),
       date.getHours(),
       date.getMinutes()
+    ];
+  }
+
+  /**
+   * Formate une date pour un événement toute la journée (sans heure)
+   */
+  private formatDateOnly(date: Date): [number, number, number] {
+    return [
+      date.getFullYear(),
+      date.getMonth() + 1,
+      date.getDate()
     ];
   }
 
