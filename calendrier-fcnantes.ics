@@ -1,5 +1,5 @@
 # FC Nantes Calendar - Généré automatiquement
-# Dernière mise à jour: 2026-05-02 22:33:27 UTC
+# Dernière mise à jour: 2026-05-02 23:36:35 UTC
 # Source: https://billetterie.fcnantes.com/fr/prochains-matchs/calendrier
 # Repository: PikPakPik/fcn-scraper
 
@@ -28,7 +28,7 @@ X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
 UID:fcn-lens-vs-nantes-1778265900000@fcnantes.com
 SUMMARY:LENS vs NANTES
-DTSTAMP:20260502T223327Z
+DTSTAMP:20260502T233635Z
 DTSTART:20260508T184500Z
 DTEND:20260508T204500Z
 DESCRIPTION:Ligue 1 McDonald's • Journée 33 • DEPLACEMENT
@@ -44,7 +44,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:fcn-nantes-vs-toulouse-1779044400000@fcnantes.com
 SUMMARY:NANTES vs TOULOUSE
-DTSTAMP:20260502T223327Z
+DTSTAMP:20260502T233635Z
 DTSTART:20260517T190000Z
 DTEND:20260517T210000Z
 DESCRIPTION:Ligue 1 McDonald's • Journée 34
