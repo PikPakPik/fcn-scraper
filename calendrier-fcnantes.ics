@@ -1,5 +1,5 @@
 # FC Nantes Calendar - Généré automatiquement
-# Dernière mise à jour: 2026-06-20 17:19:08 UTC
+# Dernière mise à jour: 2026-06-20 19:14:42 UTC
 # Source: https://billetterie.fcnantes.com/fr/prochains-matchs/calendrier
 # Repository: PikPakPik/fcn-scraper
 
@@ -28,7 +28,7 @@ X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
 UID:fcn-nantes-vs-redstar-1786214700000@fcnantes.com
 SUMMARY:NANTES vs RED STAR
-DTSTAMP:20260620T171908Z
+DTSTAMP:20260620T191442Z
 DTSTART:20260808T184500Z
 DTEND:20260808T204500Z
 DESCRIPTION:Ligue 2 BKT • Journée 1
@@ -45,7 +45,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:fcn-nantes-vs-laval-1786733100000@fcnantes.com
 SUMMARY:NANTES vs LAVAL
-DTSTAMP:20260620T171908Z
+DTSTAMP:20260620T191442Z
 DTSTART:20260814T184500Z
 DTEND:20260814T204500Z
 DESCRIPTION:Ligue 2 BKT • Journée 2 • DEPLACEMENT
