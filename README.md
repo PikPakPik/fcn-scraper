@@ -57,6 +57,9 @@ pnpm install
 
 # Exécuter le scraper
 pnpm run scrape
+
+# Vérifier les types
+pnpm typecheck
 ```
 
 ## 📋 Compétitions supportées
@@ -73,39 +76,27 @@ Le scraper récupère automatiquement tous les types de matchs :
 Le workflow GitHub Actions :
 - 🕗 S'exécute automatiquement toutes les heures
 - 🔄 Peut être déclenché manuellement depuis l'onglet "Actions" de GitHub
-- 📝 Commit automatiquement les changements s'il y en a
-- 📦 Archive le fichier .ics comme artifact
+- 📝 Commit automatiquement le .ics seulement si un match a changé
 
 ## 📊 Exemple de sortie
 
 ```
-🚀 Démarrage du scraping...
-📱 Navigation vers la page calendrier...
-📄 Récupération du contenu HTML...
-🔍 Parsing des matchs...
-✅ Match trouvé: NANTES vs PARIS SG - Ligue 1 McDonald's - Dim. 17 août 2025 - 20:45
-✅ Match trouvé: NICE vs NANTES - Ligue 1 McDonald's - Week-end du 12, 13 & 14 septembre 2025
-
-📋 Résumé: 2 matchs trouvés
-   - 1 avec date précise
-   - 1 avec date approximative
-
-⏰ Matchs avec date à confirmer:
-   - NICE vs NANTES (Week-end du 12, 13 & 14 septembre 2025)
-
-📅 Génération du fichier ICS...
-✅ Fichier ICS généré: calendrier-fcnantes.ics
-📊 1 événements ajoutés au calendrier
+🚀 Scraping du calendrier FC Nantes...
+✅ NANTES vs DUNKERQUE - Ligue 2 BKT • Journée 9 - 2026-10-17T12:00:00.000Z
+⏳ NICE vs NANTES - Ligue 2 BKT • Journée 10 - Week-end du 24, 25 & 26 octobre 2026
+📅 calendrier-fcnantes.ics généré (2 matchs trouvés)
 ```
+
+✅ date et heure connues · ⏳ date ou week-end seulement (événement « journée entière ») · ❌ sans date (exclu)
 
 ## 🔧 Structure du fichier .ics
 
 Chaque événement contient :
 - **Titre** : `EQUIPE_DOMICILE vs EQUIPE_EXTERIEUR`
-- **Description** : `Compétition: [NOM_COMPETITION]`
+- **Description** : `[NOM_COMPETITION]` (+ le stade pour les matchs à l'extérieur)
 - **Lieu** : Nom du stade (ou adresse complète pour la Beaujoire)
 - **Date/Heure** : Heure officielle du match
-- **Durée** : 2 heures (estimation)
+- **Durée** : 2 heures (estimation), ou journée(s) entière(s) si l'heure n'est pas encore connue
 
 ## 🤝 Contribution
 
