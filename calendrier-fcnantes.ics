@@ -11,7 +11,7 @@ X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
 UID:fcn-nantes-vs-grenoble-1795463100000@fcnantes.com
 SUMMARY:NANTES vs GRENOBLE
-DTSTAMP:20261116T174542Z
+DTSTAMP:20261117T095109Z
 DTSTART:20261123T194500Z
 DTEND:20261123T214500Z
 DESCRIPTION:Ligue 2 BKT • Journée 13
@@ -28,7 +28,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:fcn-montpellier-vs-nantes-1796475600000@fcnantes.com
 SUMMARY:MONTPELLIER vs NANTES
-DTSTAMP:20261116T174542Z
+DTSTAMP:20261117T095109Z
 DTSTART:20261205T130000Z
 DTEND:20261205T150000Z
 DESCRIPTION:Ligue 2 BKT • Journée 14 • DEPLACEMENT
@@ -44,7 +44,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:fcn-nantes-vs-annecy-1797015600000@fcnantes.com
 SUMMARY:NANTES vs ANNECY
-DTSTAMP:20261116T174542Z
+DTSTAMP:20261117T095109Z
 DTSTART:20261211T190000Z
 DTEND:20261211T210000Z
 DESCRIPTION:Ligue 2 BKT • Journée 15
@@ -61,7 +61,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:fcn-dijon-vs-nantes-1798912800000@fcnantes.com
 SUMMARY:DIJON vs NANTES
-DTSTAMP:20261116T174542Z
+DTSTAMP:20261117T095109Z
 DTSTART:20270102T180000Z
 DTEND:20270102T200000Z
 DESCRIPTION:Ligue 2 BKT • Journée 16 • DEPLACEMENT
@@ -75,9 +75,72 @@ TRIGGER:-PT90M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:fcn-nantes-vs-metz-1799971200000@fcnantes.com
+SUMMARY:NANTES vs METZ
+DTSTAMP:20261117T095109Z
+DTSTART;VALUE=DATE:20270115
+DTEND;VALUE=DATE:20270119
+DESCRIPTION:Ligue 2 BKT • Journée 17\nVen. 15\, Sam. 16 ou Lun. 18 jan. 202
+	7\, date & heure à confirmer
+URL:https://www.fcnantes.com/
+LOCATION:Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\,
+	 France
+CATEGORIES:Ligue 2 BKT • Journée 17,Sport,Football
+END:VEVENT
+BEGIN:VEVENT
+UID:fcn-dunkerque-vs-nantes-1800576000000@fcnantes.com
+SUMMARY:DUNKERQUE vs NANTES
+DTSTAMP:20261117T095109Z
+DTSTART;VALUE=DATE:20270122
+DTEND;VALUE=DATE:20270126
+DESCRIPTION:Ligue 2 BKT • Journée 18 • DEPLACEMENT\nVen. 22\, Sam. 23 ou Lu
+	n. 25 jan. 2027\, date & heure à confirmer
+URL:https://www.fcnantes.com/
+LOCATION:DEPLACEMENT
+CATEGORIES:Ligue 2 BKT • Journée 18,Sport,Football
+END:VEVENT
+BEGIN:VEVENT
+UID:fcn-nantes-vs-guingamp-1801180800000@fcnantes.com
+SUMMARY:NANTES vs GUINGAMP
+DTSTAMP:20261117T095109Z
+DTSTART;VALUE=DATE:20270129
+DTEND;VALUE=DATE:20270202
+DESCRIPTION:Ligue 2 BKT • Journée 19\nVen. 29\, Sam. 30 jan. ou Lun. 1 fev.
+	 2027\, date & heure à confirmer
+URL:https://www.fcnantes.com/
+LOCATION:Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\,
+	 France
+CATEGORIES:Ligue 2 BKT • Journée 19,Sport,Football
+END:VEVENT
+BEGIN:VEVENT
+UID:fcn-rodez-vs-nantes-1801785600000@fcnantes.com
+SUMMARY:RODEZ vs NANTES
+DTSTAMP:20261117T095109Z
+DTSTART;VALUE=DATE:20270205
+DTEND;VALUE=DATE:20270209
+DESCRIPTION:Ligue 2 BKT • Journée 20 • DEPLACEMENT\nVen. 5\, Sam. 6 ou Lun.
+	 8 févr. 2027\, date & heure à confirmer
+URL:https://www.fcnantes.com/
+LOCATION:DEPLACEMENT
+CATEGORIES:Ligue 2 BKT • Journée 20,Sport,Football
+END:VEVENT
+BEGIN:VEVENT
+UID:fcn-nantes-vs-boulognesurmer-1802390400000@fcnantes.com
+SUMMARY:NANTES vs BOULOGNE SUR MER
+DTSTAMP:20261117T095109Z
+DTSTART;VALUE=DATE:20270212
+DTEND;VALUE=DATE:20270216
+DESCRIPTION:Ligue 2 BKT • Journée 21\nVen. 12\, Sam. 13 ou Lun. 15 févr. 20
+	27\, date & heure à confirmer
+URL:https://www.fcnantes.com/
+LOCATION:Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\,
+	 France
+CATEGORIES:Ligue 2 BKT • Journée 21,Sport,Football
+END:VEVENT
+BEGIN:VEVENT
 UID:fcn-reims-vs-nantes-1803065400000@fcnantes.com
 SUMMARY:REIMS vs NANTES
-DTSTAMP:20261116T174542Z
+DTSTAMP:20261117T095109Z
 DTSTART:20270219T193000Z
 DTEND:20270219T213000Z
 DESCRIPTION:Ligue 2 BKT • Journée 22 • DEPLACEMENT
@@ -89,5 +152,155 @@ ACTION:DISPLAY
 DESCRIPTION:🏈 Match dans 1h30 : REIMS vs NANTES
 TRIGGER:-PT90M
 END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fcn-nantes-vs-pau-1803600000000@fcnantes.com
+SUMMARY:NANTES vs PAU
+DTSTAMP:20261117T095109Z
+DTSTART;VALUE=DATE:20270226
+DTEND;VALUE=DATE:20270302
+DESCRIPTION:Ligue 2 BKT • Journée 23\nVen. 26\, Sam. 27 févr. ou Lun. 1 mar
+	. 2027\, date & heure à confirmer
+URL:https://www.fcnantes.com/
+LOCATION:Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\,
+	 France
+CATEGORIES:Ligue 2 BKT • Journée 23,Sport,Football
+END:VEVENT
+BEGIN:VEVENT
+UID:fcn-nancy-vs-nantes-1804204800000@fcnantes.com
+SUMMARY:NANCY vs NANTES
+DTSTAMP:20261117T095109Z
+DTSTART;VALUE=DATE:20270305
+DTEND;VALUE=DATE:20270309
+DESCRIPTION:Ligue 2 BKT • Journée 24 • DEPLACEMENT\nVen. 5\, Sam. 6 ou Lun.
+	 8 mar. 2027\, date & heure à confirmer
+URL:https://www.fcnantes.com/
+LOCATION:DEPLACEMENT
+CATEGORIES:Ligue 2 BKT • Journée 24,Sport,Football
+END:VEVENT
+BEGIN:VEVENT
+UID:fcn-nantes-vs-saintetienne-1804809600000@fcnantes.com
+SUMMARY:NANTES vs SAINT ETIENNE
+DTSTAMP:20261117T095109Z
+DTSTART;VALUE=DATE:20270312
+DTEND;VALUE=DATE:20270316
+DESCRIPTION:Ligue 2 BKT • Journée 25\nVen. 12\, Sam. 13 ou Lun. 15 mar. 202
+	7\, date & heure à confirmer
+URL:https://www.fcnantes.com/
+LOCATION:Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\,
+	 France
+CATEGORIES:Ligue 2 BKT • Journée 25,Sport,Football
+END:VEVENT
+BEGIN:VEVENT
+UID:fcn-grenoble-vs-nantes-1805414400000@fcnantes.com
+SUMMARY:GRENOBLE vs NANTES
+DTSTAMP:20261117T095109Z
+DTSTART;VALUE=DATE:20270319
+DTEND;VALUE=DATE:20270323
+DESCRIPTION:Ligue 2 BKT • Journée 26 • DEPLACEMENT\nVen. 19\, Sam. 20 ou Lu
+	n. 22 mar. 2027\, date & heure à confirmer
+URL:https://www.fcnantes.com/
+LOCATION:DEPLACEMENT
+CATEGORIES:Ligue 2 BKT • Journée 26,Sport,Football
+END:VEVENT
+BEGIN:VEVENT
+UID:fcn-nantes-vs-sochaux-1806624000000@fcnantes.com
+SUMMARY:NANTES vs SOCHAUX
+DTSTAMP:20261117T095109Z
+DTSTART;VALUE=DATE:20270402
+DTEND;VALUE=DATE:20270406
+DESCRIPTION:Ligue 2 BKT • Journée 27\nVen. 2\, Sam. 3 ou Lun. 5 avr. 2027\,
+	 date & heure à confirmer
+URL:https://www.fcnantes.com/
+LOCATION:Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\,
+	 France
+CATEGORIES:Ligue 2 BKT • Journée 27,Sport,Football
+END:VEVENT
+BEGIN:VEVENT
+UID:fcn-metz-vs-nantes-1807228800000@fcnantes.com
+SUMMARY:METZ vs NANTES
+DTSTAMP:20261117T095109Z
+DTSTART;VALUE=DATE:20270409
+DTEND;VALUE=DATE:20270413
+DESCRIPTION:Ligue 2 BKT • Journée 28 • DEPLACEMENT\nVen. 9\, Sam. 10 ou Lun
+	. 12 avr. 2027\, date & heure à confirmer
+URL:https://www.fcnantes.com/
+LOCATION:DEPLACEMENT
+CATEGORIES:Ligue 2 BKT • Journée 28,Sport,Football
+END:VEVENT
+BEGIN:VEVENT
+UID:fcn-redstar-vs-nantes-1807833600000@fcnantes.com
+SUMMARY:RED STAR vs NANTES
+DTSTAMP:20261117T095109Z
+DTSTART;VALUE=DATE:20270416
+DTEND;VALUE=DATE:20270420
+DESCRIPTION:Ligue 2 BKT • Journée 29 • DEPLACEMENT\nVen. 16\, Sam. 17 ou Lu
+	n. 19 avr. 2027\, date & heure à confirmer
+URL:https://www.fcnantes.com/
+LOCATION:DEPLACEMENT
+CATEGORIES:Ligue 2 BKT • Journée 29,Sport,Football
+END:VEVENT
+BEGIN:VEVENT
+UID:fcn-nantes-vs-montpellier-1808438400000@fcnantes.com
+SUMMARY:NANTES vs MONTPELLIER
+DTSTAMP:20261117T095109Z
+DTSTART;VALUE=DATE:20270423
+DTEND;VALUE=DATE:20270427
+DESCRIPTION:Ligue 2 BKT • Journée 30\nVen. 23\, Sam. 24 ou Lun. 26 avr. 202
+	7\, date & heure à confirmer
+URL:https://www.fcnantes.com/
+LOCATION:Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\,
+	 France
+CATEGORIES:Ligue 2 BKT • Journée 30,Sport,Football
+END:VEVENT
+BEGIN:VEVENT
+UID:fcn-clermont-vs-nantes-1809043200000@fcnantes.com
+SUMMARY:CLERMONT vs NANTES
+DTSTAMP:20261117T095109Z
+DTSTART;VALUE=DATE:20270430
+DTEND;VALUE=DATE:20270504
+DESCRIPTION:Ligue 2 BKT • Journée 31 • DEPLACEMENT\nVen. 30 avr.\, Sam. 1 o
+	u Lun. 3 mai 2027\, date & heure à confirmer
+URL:https://www.fcnantes.com/
+LOCATION:DEPLACEMENT
+CATEGORIES:Ligue 2 BKT • Journée 31,Sport,Football
+END:VEVENT
+BEGIN:VEVENT
+UID:fcn-nantes-vs-dijon-1809648000000@fcnantes.com
+SUMMARY:NANTES vs DIJON
+DTSTAMP:20261117T095109Z
+DTSTART;VALUE=DATE:20270507
+DTEND;VALUE=DATE:20270511
+DESCRIPTION:Ligue 2 BKT • Journée 32\nVen. 7\, Sam. 8 ou Lun. 10 mai 2027\,
+	 date & heure à confirmer
+URL:https://www.fcnantes.com/
+LOCATION:Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\,
+	 France
+CATEGORIES:Ligue 2 BKT • Journée 32,Sport,Football
+END:VEVENT
+BEGIN:VEVENT
+UID:fcn-nantes-vs-laval-1810252800000@fcnantes.com
+SUMMARY:NANTES vs LAVAL
+DTSTAMP:20261117T095109Z
+DTSTART;VALUE=DATE:20270514
+DTEND;VALUE=DATE:20270515
+DESCRIPTION:Ligue 2 BKT • Journée 33\nVen. 14 mai 2027\, date & heure à con
+	firmer
+URL:https://www.fcnantes.com/
+LOCATION:Stade de la Beaujoire\, 330 Route de Saint-Joseph\, 44300 Nantes\,
+	 France
+CATEGORIES:Ligue 2 BKT • Journée 33,Sport,Football
+END:VEVENT
+BEGIN:VEVENT
+UID:fcn-annecy-vs-nantes-1810944000000@fcnantes.com
+SUMMARY:ANNECY vs NANTES
+DTSTAMP:20261117T095109Z
+DTSTART;VALUE=DATE:20270522
+DTEND;VALUE=DATE:20270523
+DESCRIPTION:Ligue 2 BKT • Journée 34 • DEPLACEMENT\nSam. 22 mai 2027\, date
+	 & heure à confirmer
+URL:https://www.fcnantes.com/
+LOCATION:DEPLACEMENT
+CATEGORIES:Ligue 2 BKT • Journée 34,Sport,Football
 END:VEVENT
 END:VCALENDAR
