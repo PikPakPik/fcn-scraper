@@ -51,7 +51,14 @@ function toEvent(match: Match): EventAttributes | null {
     // Événement « journée entière » : la fin ICS est exclusive
     const end = new Date(match.days.end);
     end.setDate(end.getDate() + 1);
-    return { ...event, uid: uid(match, match.days.start), start: dateOnly(match.days.start), end: dateOnly(end) };
+    return {
+      ...event,
+      // Garde la liste des jours possibles ("Ven. 15, Sam. 16 ou Lun. 18 jan. 2027…") : l'événement couvre aussi les jours entre
+      description: `${event.description}\n${match.dateText}`,
+      uid: uid(match, match.days.start),
+      start: dateOnly(match.days.start),
+      end: dateOnly(end)
+    };
   }
 
   return null;
